@@ -1,55 +1,35 @@
-name: Generate Contribution Snake
+name: Generate Snake
 
-# Runs daily, on manual trigger, or on push to main
 on:
   schedule:
-    - cron: "0 0 * * *"   # every day at 00:00 UTC
-  workflow_dispatch:
+    # Runs at 00:00 UTC every day
+    - cron: "0 0 * * *"
+  workflow_dispatch: # allows manual trigger
   push:
     branches:
       - main
 
-# Ensure workflow can push files
-permissions:
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      # Get repo content
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Generate snake SVG
-        uses: Platane/snk@v3
+      # Generate the snake animation
+      - name: Generate Snake SVG
+        uses: Platane/snk/svg-only@v3
         with:
-          # uses the repository owner (works without hardcoding your username)
           github_user_name: ${{ github.repository_owner }}
-          # this action outputs the file at dist/snake.svg
-          outputs: dist/snake.svg
+          outputs: dist/github-contribution-grid-snake.svg
 
-      - name: Prepare output directory and copy snake
-        run: |
-          mkdir -p output
-          if [ -f dist/snake.svg ]; then
-            cp dist/snake.svg output/snake.svg
-            echo "snake copied to output/snake.svg"
-          else
-            echo "ERROR: dist/snake.svg not found" >&2
-            ls -la
-            exit 1
-          fi
-          ls -la output
-
-      - name: Commit and push snake to branch 'output'
-        uses: EndBug/add-and-commit@v9
+      # Push the generated files to the output branch
+      - name: Push Snake to Output Branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          author_name: github-actions
-          author_email: github-actions@github.com
-          message: 'chore: update contribution snake'
-          add: 'output/snake.svg'
-          branch: output
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
