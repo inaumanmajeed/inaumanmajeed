@@ -12,8 +12,13 @@ I'm a dedicated frontend developer building clean, scalable, and user-focused in
 Currently expanding my skills across modern frontend and backend technologies with a strong focus on performance and maintainability.
 
 - Expertise in React.js, React Native (using Expo), and modern frontend frameworks  
-- Experienced in building real-world dashboards, forms, and responsive UI  
+- Experienced in building real-world dashboards, forms, and responsive UIs  
 - Passionate about writing clean, optimized code and delivering great user experience  
+
+## Recent Works
+
+[![Matrimonials AI](https://img.shields.io/badge/Matrimonials_AI-E94D89?style=for-the-badge&logoColor=white)](https://www.matrimonials.ai/) [![MyStock](https://img.shields.io/badge/MyStock-4C6EF5?style=for-the-badge&logoColor=white)](https://mystock.bg/) [![KOTC Admin](https://img.shields.io/badge/KOTC_Admin-2F80ED?style=for-the-badge&logoColor=white)](https://kotc-admin-staging.web.app/auth/sign-in) [![GeoLanes](https://img.shields.io/badge/GeoLanes-20C997?style=for-the-badge&logoColor=white)](https://www.geolanes.com/) [![Wishlist](https://img.shields.io/badge/Wishlist-1877F2?style=for-the-badge&logoColor=white)](https://www.wishlist.com/)
+
 
 ## Tech Stack
 
@@ -36,7 +41,7 @@ Currently expanding my skills across modern frontend and backend technologies wi
 - Linux command line and shell scripting  
 - Backend scalability and system design for high availability  
 - Advanced caching strategies with Redis  
-- Building efficient, scalable REST APIs and GraphQL servers  
+- Efficient REST API and GraphQL backend implementations  
 - Continuous integration and deployment (CI/CD) pipelines  
 
 ## What I'm Working On
@@ -54,7 +59,7 @@ Currently expanding my skills across modern frontend and backend technologies wi
 - Contribute to open-source projects when possible  
 - Continuously grow as a developer through learning and collaboration  
 
-## Let's Connect
+## Let’s Connect
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=netlify&logoColor=white)](https://inauman.netlify.app/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/inaumanmajeed)
 
